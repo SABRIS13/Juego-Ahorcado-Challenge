@@ -1,0 +1,35 @@
+:root {
+    
+    --monserrat:'Montserrat', sans-serif;
+    --open-sans: 'Open Sans', sans-serif;
+    --cowboy: 'Road Rage', cursive;
+}
+
+body {
+    font-family: var(--cowboy);
+}
+
+.container {
+    padding-right: 6%;
+    padding-left: 6%;
+
+
+}
+
+.boton {
+    text-align: center;
+    display: block;
+    width: 100%;
+    max-width: 350px;
+    box-sizing: border-box;
+    padding: 1rem 2rem;
+    border: 1px solid var(--boton-rojo);
+    border-radius: 5px;
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        padding-left: calc((100% - 940px)/2);
+        padding-right: calc((100% - 940px)/2);
+    }
+}
