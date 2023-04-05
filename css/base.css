@@ -3,10 +3,15 @@
     --monserrat:'Montserrat', sans-serif;
     --open-sans: 'Open Sans', sans-serif;
     --cowboy: 'Road Rage', cursive;
+    --fondo:#383414;
 }
 
 body {
     font-family: var(--cowboy);
+}
+
+footer{
+    background-color: var(--fondo);
 }
 
 .container {

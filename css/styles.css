@@ -1,0 +1,62 @@
+html {
+    height: 100vh;
+}
+
+body{
+    background-image:url("../imagenes/portada.jpg");
+    background-size:cover;
+    height:90hv;
+
+}
+
+footer{
+    position: absolute;
+    height: 10%;
+    width:100%;
+    bottom:0;
+    left:0; 
+}
+
+.info{
+    display: flex;
+    width:100%;
+}
+
+.datos{
+    color:white;
+    font-family: 'Roboto Slab', serif;
+    font-weight:bold ;
+    font-size:14px;
+    margin-top: 20px;
+    text-align: center;
+    padding-left: 45%;
+}
+
+.contacto{
+    display: flex;
+    padding-left: 25%;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacto img{
+    width: 40px;
+    margin-right: 15px;
+}
+
+/*          Dimensiones de tablet / celular
+=============================================*/
+
+@media (max-width: 900px){
+    body{
+        background-size: cover;
+    }
+}
+
+@media (max-width:600px){
+    footer{
+        flex-direction: row;
+    }
+}
