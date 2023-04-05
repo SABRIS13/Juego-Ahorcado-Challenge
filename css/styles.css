@@ -8,11 +8,8 @@ html {
 
 .container{
     display: grid;
-    gap: 10px;
-    min-height: 100vh;
     grid-template: 
     "header" 100px
-    
     "footer" auto;
 }
 
