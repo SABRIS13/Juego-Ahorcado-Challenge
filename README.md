@@ -14,3 +14,7 @@ Challenge 2 del programa de "New Education Oracle" con Alura Latam. Se creó un 
 ---
 Extras:
 - La página debe tener un campo para inserción de texto con la finalidad de adicionar nuevas palabras al juego, e un botón "Agregar palabra".
+
+### Resultado
+
+ https://sabris13.github.io/Juego-Ahorcado-Challenge/
