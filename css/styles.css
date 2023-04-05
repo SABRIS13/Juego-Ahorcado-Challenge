@@ -2,6 +2,20 @@ html {
     height: 100vh;
 }
 
+.home{
+    display: block;
+}
+
+.container{
+    display: grid;
+    gap: 10px;
+    min-height: 100vh;
+    grid-template: 
+    "header" 100px
+    
+    "footer" auto;
+}
+
 body{
     background-image:url("../imagenes/portada.jpg");
     background-size:cover;
@@ -24,7 +38,7 @@ footer{
     font-family: var(--info);
     font-size: 18px;
     text-align: center;
-    padding-left: 5%;
+    padding-left: 8%;
 }
 
 .contacto{
