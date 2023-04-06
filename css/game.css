@@ -6,76 +6,100 @@
 }
 
 body{
-    background-image: url("../img/juego.jpg");
+    background-image: url("/img/juego.jpg");
     height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
-
-
-/*CSS GRID CONFIG
-===============================*/
-
 .stick{
+    top: 100px;
+    left:5%;
+    position: absolute;
     display: flex;
     justify-content: center;
-    align-items: center;
-    grid-area: stick;
-    background: rgba(255, 255, 255, 0.2);
+    align-items: baseline;
+    background: var(--background);
     border-radius: 35px;
-    box-shadow: 0 15px 4px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-right: 1px solid rgba(255, 255, 255, 0.2) ;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2) ;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
+    width: 40%;
+    height: 75%;
+}
+
+.img_hang{
+    width: 500px;
+    background-size: cover;
 }
 
 .correct_letters{
-    display: flex;
-    justify-content: center;
-    align-items:flex-end;
-   
+    position:absolute;
+    top:200px;
+    right: 5%;
+    justify-content: flex-end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    align-items: flex-end;
 }
-
+   
 .used_letters{
-    display: flex;
+
+    position: absolute;
+    top:250px;
     justify-content: center;
+    display: flex;
     align-items: flex-start;
+    margin-left: 10%;
 }
 
 .letters{
+    position: absolute;
+    top:300px;
+    margin-left: 10%;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 6px;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 10%;
+}
+.buttons_game{
+    position: absolute;
+    top:450px;
 }
 
-.btn_restart{
+.return{
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+.btn_restart , .btn_end{
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
-.btn_end{
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+body.swal2-height-auto {
+    height: inherit;
 }
-
-
 /*              CSS
 ========================================*/
 
-.btn_restart{
+.btn_restart, .btn_end{
     text-decoration: none;
     color: #0A3871;
     border: none;
-    font-size: 18px;
-    padding: 25px;
-    width: 90%;
+    font-size: 1.5rem;
+    padding:2%;
+    margin-right: 1%;
+    width: 35%;
     border-radius: 35px;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
@@ -83,45 +107,22 @@ body{
     border-top:  1px solid rgba(255, 255, 255, 0.5);
     border-left:  1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ;
-}
-
-.btn_end{
-    text-decoration: none;
-    color: #0A3871;
-    border: none;
-    width: 90%;
-    font-size: 18px;
-    padding: 25px;
-    border-radius: 35px;
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-    background: rgba(255, 255, 255, 0.2);
-    border-top:  1px solid rgba(255, 255, 255, 0.5);
-    border-left:  1px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ;
-    transition: all 0.3s ease-in-out;
     
 }
 
 .correct_letters span{
     position: relative;
     vertical-align: bottom;
-    color: #fff;
-    font-size: 1.5em;
-    border-bottom: 3px solid #0a3264;
-    width: 40px;
+    color: white;
+    font-size: 1.5rem;
+    border-bottom: 3px solid #8a1228;
+    width: 50px;
     text-align: center;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgb(100, 79, 54);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ;
-    border-radius: 25px;
-    margin-right: 6px;
+    border-radius: 20px;
+    margin-right: 1rem;
     display: inline-block;
-}
-
-
-.img_hang{
-    width: 220px;
-    background-size: cover;
 }
 
 .used_letters span{
@@ -151,38 +152,39 @@ body{
 }
 
 .letters button{
-    color: #fff;
+    color: white;
     border: none;
-    background: rgba(255, 255, 255, 0.2);
-    border-top:  1px solid transparent;
-    border-left:  1px solid transparent;
+    background: var(--fondo);
+    border-top: 1px solid #ce7b1d;
+    border-left: 1px solid #e37f26;
     border-radius: 15px;
-    padding: 10px;
+    padding: 1rem;
     outline: none;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+    margin: 2.5px;
 }
 
 .letters .btn_used{
-    color: red;
+    color: white;
     border: none;
-    background: rgba(253, 5, 5, 0.2);
+    background: var(--back_incorrect);
     border-top:  1px solid transparent;
     border-left:  1px solid transparent;
     border-radius: 15px;
-    padding: 10px;
+    padding: 13px;
     outline: none;
     cursor: pointer;
 }
 
 .letters .btn_used_hit{
-    color: #21fc5b;
+    color: white;
     border: none;
-    background: rgba(5, 253, 38, 0.2);
+    background:var(--back_correct);
     border-top:  1px solid transparent;
     border-left:  1px solid transparent;
     border-radius: 15px;
-    padding: 10px;
+    padding: 13px;
     outline: none;
     cursor: pointer;
 }
@@ -206,10 +208,17 @@ body{
   }
 
 
+  /*PSEUDO ELEMNTOS
+====================================*/
+
 @media (max-width: 900px){
     body{
         background-image: url("../img/juego.jpg");
     }
+
+
+    .btn_restart, .btn_end{
+        margin-right: 10%;
 
 }
 

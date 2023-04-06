@@ -42,48 +42,6 @@ const generateSpan = () => {
     }
 }
 
-//Alertas
-
-function aError(palabra) { //Alarma por si no se adivina la palabra
-    Swal.fire({
-        icon: 'error',
-        title: 'Ahorcado...',
-        text: "No adivinaste la palabra esta era : " + palabra,
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Jugar de Nuevo',
-        cancelButtonText: 'Desistir'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            playGame();
-        }
-        if (result.isDismissed) {
-            window.location.href = "index.html";
-        }
-    })
-}
-
-function aSuccess(palabra) { //Alarma por adivinar la palabra
-    Swal.fire({
-        icon: 'success',
-        title: 'Felicidades!',
-        text: "Has advinado la palabra : " + palabra,
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Jugar de Nuevo',
-        cancelButtonText: 'Desistir'
-    }).then((result) => {
-        if (result.isConfirmed) {
-            playGame()
-        }
-        if (result.isDismissed) {
-            window.location.href = "index.html";
-        }
-    })
-}
-
 
 //Botones ya con sus eventos a escuchar;
 
@@ -95,19 +53,17 @@ const playGame = () => {
     resetClassBtn();
 }
 
-
-
-btn_restart.addEventListener('click', playGame);
-
 window.onload = function() {
     playGame();
   };
+btn_restart.addEventListener('click', playGame);
+
 
 const endGame = () => {
     if (mistakes == 7) {
-        aError(wordSelect);
+        alert_error(wordSelect);
     } else if (hits == wordSelect.length) {
-        aSuccess(wordSelect)
+        alert_success(wordSelect)
     }
 }
 
@@ -117,7 +73,6 @@ const eventButtons = () => {
         allButtons[i].addEventListener('click', clickButton);
     }
 }
-
 
 const incorrectLetter = letter => {
     let span = document.createElement('span');
