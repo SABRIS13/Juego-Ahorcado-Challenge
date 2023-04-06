@@ -1,8 +1,221 @@
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: var(--cowboy);
 }
 
 body{
     background-image: url("../img/juego.jpg");
+    height: 100%;
+}
+
+
+
+/*CSS GRID CONFIG
+===============================*/
+
+.stick{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: stick;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 35px;
+    box-shadow: 0 15px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.2) ;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) ;
+    backdrop-filter: blur(5px);
+}
+
+.correct_letters{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+   
+}
+
+.used_letters{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.letters{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.btn_restart{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.btn_end{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+/*              CSS
+========================================*/
+
+.btn_restart{
+    text-decoration: none;
+    color: #0A3871;
+    border: none;
+    font-size: 18px;
+    padding: 25px;
+    width: 90%;
+    border-radius: 35px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border-top:  1px solid rgba(255, 255, 255, 0.5);
+    border-left:  1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ;
+}
+
+.btn_end{
+    text-decoration: none;
+    color: #0A3871;
+    border: none;
+    width: 90%;
+    font-size: 18px;
+    padding: 25px;
+    border-radius: 35px;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    border-top:  1px solid rgba(255, 255, 255, 0.5);
+    border-left:  1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.correct_letters span{
+    position: relative;
+    vertical-align: bottom;
+    color: #fff;
+    font-size: 1.5em;
+    border-bottom: 3px solid #0a3264;
+    width: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ;
+    border-radius: 25px;
+    margin-right: 6px;
+    display: inline-block;
+}
+
+
+.img_hang{
+    width: 220px;
+    background-size: cover;
+}
+
+.used_letters span{
+    color: #fff;
+    margin-right: 6px;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.box{
+    background: rgba(255, 255, 255, 0.2);
+    border-top:  1px solid transparent;
+    border-left:  1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ; 
+    border-radius: 20px;
+}
+
+.lX{
+    background: rgba(255, 255, 255, 0.2);
+    border-top:  1px solid transparent;
+    border-left:  1px solid transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ; 
+    border-radius: 10px;
+    text-align: center;
+    padding: 20;
+    width: 30px;    
+}
+
+.letters button{
+    color: #fff;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-top:  1px solid transparent;
+    border-left:  1px solid transparent;
+    border-radius: 15px;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.letters .btn_used{
+    color: red;
+    border: none;
+    background: rgba(253, 5, 5, 0.2);
+    border-top:  1px solid transparent;
+    border-left:  1px solid transparent;
+    border-radius: 15px;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+.letters .btn_used_hit{
+    color: #21fc5b;
+    border: none;
+    background: rgba(5, 253, 38, 0.2);
+    border-top:  1px solid transparent;
+    border-left:  1px solid transparent;
+    border-radius: 15px;
+    padding: 10px;
+    outline: none;
+    cursor: pointer;
+}
+
+
+/*PSEUDO ELEMNTOS
+====================================*/
+
+.btn_restart:hover{
+    transform: translateY(-3px);
+    background-color: #fff;
+  }
+
+.btn_restart:hover{
+    transform: translateY(-3px);
+    background-color: #fff;
+  }  
+
+.letters button:hover{
+    transform: translateY(-2px);
+  }
+
+
+@media (max-width: 900px){
+    body{
+        background-image: url("../img/juego.jpg");
+    }
+
+}
+
+@media (max-width:600px){
+    body{
+        background-image: url("../img/juego.jpg");
+    }
+
 }

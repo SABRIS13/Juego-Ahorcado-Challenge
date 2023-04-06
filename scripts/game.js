@@ -1,37 +1,46 @@
-// Words of the games
-const words = ['JUEGO', 'VAQUERO', 'CELULAR', 'OESTE', 'CASA', 'SOMBRERO', 'ALURA', 'PELICULAS', 'LIBROS', 'VIDEO', 'CARICATURAS', 'LIBERTAD'];
+//Palabras a adivinar
+const palabras = ["ALURA","COWBOY"];
 
+//Elementos a manipular
+const correct_letters = document.querySelector(".correct_letters");
+const used_letters = document.querySelector(".used_letters");
+const img = document.querySelector(".img_hang");
+const btn_restart = document.querySelector(".btn_restart");
 
-const addLetters = document.querySelector('.correct_letters');
-const incorrectLetters = document.querySelector('.incorrect_letters');
-const label = document.querySelector('#img_label');
-
-const btn_restart = document.querySelector('#restart-game'); // button to restart
-const btn_end = document.querySelector('#end-game'); //button to end a game
-
-
+let wordSelect;
+let letters_used;
+let mistakes;
+let hits;
+let classDepend = true;
 //LLamadas
 
-const random = (min, max) => { //Random number
+
+const wordRandom = (min, max) => { //Numero aleatorio;
     let aWord = max - min;
     let wordR = Math.floor(Math.random() * aWord + min);
     return wordR;
 }
 
 const wordRandomSelect = () => { // Palabra aleatoria;
-    let wordS = words[wordRandom(0, palabras.length)];
+    let wordS = palabras[wordRandom(0, palabras.length)];
     wordSelect = wordS
 }
 
 const resetsValue = () => { //Resetea los valores para un neuvo juego;
-    lettersUsed = [];
+    letters_used = [];
     mistakes = 0;
     hits = 0;
-    addLetters.innerHTML = '';
-    incorrectLetters.innerHTML = '';
-    img.src = `./img/img0.png`;
+    correct_letters.innerHTML = "";
+    used_letters.innerHTML = "";
+    img.src = "/img/hang0.png";
 }
 
+const generateSpan = () => {
+    for (let i = 0; i < wordSelect.length; i++) {
+        let span = document.createElement('span');
+        correct_letters.appendChild(span)
+    }
+}
 
 //Alertas
 
@@ -50,8 +59,7 @@ function aError(palabra) { //Alarma por si no se adivina la palabra
             playGame();
         }
         if (result.isDismissed) {
-            visibleHome();
-            game.style.display = 'none';
+            window.location.href = "index.html";
         }
     })
 }
@@ -71,31 +79,107 @@ function aSuccess(palabra) { //Alarma por adivinar la palabra
             playGame()
         }
         if (result.isDismissed) {
-            visibleHome()
-            game.style.display = 'none';
+            window.location.href = "index.html";
         }
     })
 }
 
-function addedWord() {
-    Swal.fire({
-        position: 'center',
-        icon: 'success',
-        title: 'Su palabra a sido añadida!',
-        showConfirmButton: false,
-        timer: 1500
-    })
+
+//Botones ya con sus eventos a escuchar;
+
+const playGame = () => {
+    resetsValue();
+    wordRandomSelect();
+    generateSpan();
+    eventButtons();
+    resetClassBtn();
 }
 
-function repeatWord(palabra) {
-    Swal.fire({
-        position: 'center',
-        icon: 'warning',
-        title: 'Su palabra ' + palabra + " ya se agrego!",
-        showConfirmButton: false,
-        timer: 1500
-    })
-}
 
 
 btn_restart.addEventListener('click', playGame);
+
+window.onload = function() {
+    playGame();
+  };
+
+const endGame = () => {
+    if (mistakes == 7) {
+        aError(wordSelect);
+    } else if (hits == wordSelect.length) {
+        aSuccess(wordSelect)
+    }
+}
+
+const eventButtons = () => {
+    let allButtons = document.querySelectorAll('.letters button');
+    for (let i = 0; i < allButtons.length; i++) {
+        allButtons[i].addEventListener('click', clickButton);
+    }
+}
+
+
+const incorrectLetter = letter => {
+    let span = document.createElement('span');
+    span.classList.add('lX');
+    used_letters.appendChild(span);
+    span.innerHTML = letter;
+}
+
+const wronLetter = letter => {
+    mistakes++;
+    let source = `/img/hang${mistakes}.png`;
+    img.src = source;
+    endGame();
+}
+
+const addLetter = letter => {
+    let spans = document.querySelectorAll('.correct_letters span');
+    for (let i = 0; i < spans.length; i++) {
+        if (letter == wordSelect[i]) {
+            spans[i].innerHTML = letter;
+            hits++;
+        }
+    }
+    endGame();
+}
+
+const verifyLetter = letter => {
+    if (wordSelect.includes(letter)) {
+        addLetter(letter);
+        classDepend = true;
+    } else {
+        wronLetter(letter);
+        incorrectLetter(letter)
+        classDepend = false;
+    }
+    letters_used.push(letter);
+}
+
+const resetClassBtn = () => {
+    let allButtons = document.querySelectorAll('.letters button');
+    for (let i = 0; i < allButtons.length; i++) {
+        allButtons[i].classList.remove('btn_used');
+        allButtons[i].classList.remove('btn_used_hit');
+    }
+}
+
+const clickButton = event => {
+    let buttons = event.target;
+    let letter = buttons.innerHTML;
+    if (!letters_used.includes(letter)) {
+        verifyLetter(letter);
+    }
+
+    if (classDepend == false) {
+        buttons.classList.add('btn_used');
+    } else {
+        buttons.classList.add('btn_used_hit');
+    }
+}
+
+
+
+
+
+

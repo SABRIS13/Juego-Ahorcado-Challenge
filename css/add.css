@@ -6,3 +6,21 @@
 body{
     background-image: url("../img/guardar_palabra.jpg");
 }
+
+
+
+
+
+@media (max-width: 900px){
+    body{
+        background-image: url("../img/guardar_palabra.jpg");
+    }
+
+}
+
+@media (max-width:600px){
+    body{
+        background-image: url("../img/guardar_palabra.jpg");
+    }
+
+}
