@@ -11,7 +11,7 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    background-color:var(--fondo);
+    background-color:var(--header);
     width: 100%;
     height: 60px;
     display: flex;
@@ -32,16 +32,23 @@ html, body {
     justify-content: center;
     align-items: center;
 }
+
+
 .container{
     display: flex;
     flex-direction: column;
 }
-.start-game, .add-button{
+.start_game, .add_button{
     justify-content: center;
     font-size: 2.5rem;
     width: 15rem;
     height:5rem;
     margin-top: 1rem;
+
+}
+.game, .add{
+    text-decoration:none;
+    color:var(--buton);
 }
 
 footer{
@@ -82,7 +89,7 @@ header p{
 }
 
 
-.start-game, .add-button{
+.start_game, .add_button{
     backdrop-filter: blur(5px);
     color: var(--buton);
     border: none;
@@ -98,19 +105,19 @@ header p{
 /*  Responsividad
 =============================================*/
 
-.start-game:hover{
+.start_game:hover{
     transform: translateY(-3px);
     background-color: var(--start);
     color: white;
   }
 
-  .add-button:hover{
+  .add_button:hover{
     transform: translateY(3px);
     background-color: var(--add);
     color:white;
   }  
 
-.footer img:hover{
+.contacto img:hover{
     transform: translateY(-1px);
 }
 
