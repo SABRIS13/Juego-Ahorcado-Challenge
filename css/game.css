@@ -61,7 +61,6 @@ body{
 .letters{
     position: absolute;
     top:300px;
-    margin-left: 10%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -70,20 +69,16 @@ body{
 }
 .buttons_game{
     position: absolute;
-    top:450px;
+    top:500px;
+
 }
 
 .return{
     text-decoration: none;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 1rem;
+    position: absolute;
 }
 .btn_restart , .btn_end{
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
 }
 
 body.swal2-height-auto {
@@ -158,11 +153,11 @@ body.swal2-height-auto {
     border-top: 1px solid #ce7b1d;
     border-left: 1px solid #e37f26;
     border-radius: 15px;
-    padding: 1rem;
+    padding:16px;
     outline: none;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
-    margin: 2.5px;
+    margin: 2px;
 }
 
 .letters .btn_used{
@@ -211,20 +206,24 @@ body.swal2-height-auto {
   /*PSEUDO ELEMNTOS
 ====================================*/
 
+
 @media (max-width: 900px){
     body{
         background-image: url("../img/juego.jpg");
     }
 
+    .letters button{
+        padding:15px;
+    }
 
     .btn_restart, .btn_end{
         margin-right: 10%;
 
+}
 }
 
 @media (max-width:600px){
     body{
         background-image: url("../img/juego.jpg");
     }
-
 }
