@@ -6,12 +6,14 @@
 
 /*  Home
 =============================================*/
-.header_inicio{
-    height: 60px;
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(34, 82, 31, 0.871);
     width: 100%;
-    position: absolute;
-    top:0;
-    background-color: black;
+    height: 60px;
 }
 
 html, body {
@@ -22,11 +24,25 @@ html, body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.start-game, .add-button{
+    justify-content: center;
+    font-size: 2rem;
+    width: 15rem;
+    height:5rem;
+    margin-top: 1rem;
+}
+
+
 
 footer{
     position: absolute;
-    height:50px;
+    height:60px;
     width:100%;
     bottom:0;
     left:0; 
@@ -56,7 +72,12 @@ footer{
     margin-right: 20px;
 }
 
-/*  Dimensiones de tablet / celular
+/*  Styles for buttons
+=============================================*/
+
+
+
+/*  Responsividad
 =============================================*/
 
 @media (max-width: 900px){
