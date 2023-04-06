@@ -11,10 +11,14 @@ header{
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(34, 82, 31, 0.871);
+    background-color:var(--fondo);
     width: 100%;
     height: 60px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
+
 
 html, body {
     height: 100%;
@@ -28,17 +32,17 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-
-
+.container{
+    display: flex;
+    flex-direction: column;
+}
 .start-game, .add-button{
     justify-content: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     width: 15rem;
     height:5rem;
     margin-top: 1rem;
 }
-
-
 
 footer{
     position: absolute;
@@ -49,7 +53,6 @@ footer{
     display: flex;
     align-items: center;
 }
-
 .datos{
     color: white;
     font-family: var(--info);
@@ -57,24 +60,59 @@ footer{
     text-align: center;
     padding-left: 8%;
 }
-
 .contacto{
     display: flex;
     align-content: space-around;
     justify-content: space-between;
     align-items: center;
     padding-left: 60%;
-
 }
-
 .contacto img{
     width: 40px;
     margin-right: 20px;
 }
 
-/*  Styles for buttons
+/*  Styles 
+=============================================*/
+header p{
+    font-family: var(--info);
+    color: white;
+    font-size: 18px;
+    margin-top: 1.5rem;
+}
+
+
+.start-game, .add-button{
+    backdrop-filter: blur(5px);
+    color: var(--buton);
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.455);
+    border-top:  1px solid rgba(255, 255, 255, 0.5);
+    border-left:  1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ;
+    transition: all 0.3s ease-in-out;;
+}
+
+/*  Responsividad
 =============================================*/
 
+.start-game:hover{
+    transform: translateY(-3px);
+    background-color: var(--start);
+    color: white;
+  }
+
+  .add-button:hover{
+    transform: translateY(3px);
+    background-color: var(--add);
+    color:white;
+  }  
+
+.footer img:hover{
+    transform: translateY(-1px);
+}
 
 
 /*  Responsividad
