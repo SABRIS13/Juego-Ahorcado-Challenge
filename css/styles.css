@@ -1,28 +1,32 @@
-html {
-    height: 100vh;
+*{
+    margin: 0;
+    padding: 0;
 }
 
-.home{
-    display: block;
+
+/*  Home
+=============================================*/
+.header_inicio{
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    top:0;
+    background-color: black;
 }
 
-.container{
-    display: grid;
-    grid-template: 
-    "header" 100px
-    "footer" auto;
-}
-
-body{
-    background-image:url("../imagenes/portada.jpg");
-    background-size:cover;
-    height:90hv;
-
-}
+html, body {
+    height: 100%;
+    width: 100%;
+    background: black url(../img/portada.jpg) center center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
 
 footer{
     position: absolute;
-    height: 10%;
+    height:50px;
     width:100%;
     bottom:0;
     left:0; 
@@ -52,12 +56,12 @@ footer{
     margin-right: 20px;
 }
 
-/*          Dimensiones de tablet / celular
+/*  Dimensiones de tablet / celular
 =============================================*/
 
 @media (max-width: 900px){
     body{
-        background-size: cover;
+        background-image: url("../img/portada_tablet.jpg");
     }
     .contacto{
         padding-left: 40%;
@@ -65,6 +69,9 @@ footer{
 }
 
 @media (max-width:600px){
+    body{
+        background-image: url("../img/portada_cel.jpg");
+    }
     footer{
         display:table;
     }

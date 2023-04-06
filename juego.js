@@ -1,3 +1,6 @@
 function IniciarJuego(){
-    document.getElementById("iniciar-juego").style.display="none";
+    document.getElementById("start-game").style.display="none";
+    document.body.style.backgroundImage = "url('../img/juego.jpg')";
+
 }
+
