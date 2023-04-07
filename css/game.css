@@ -17,7 +17,7 @@ header{
 }
 
 body {
-    background-image: url(../img/juego.jpg);
+    background: black url(../img/juego.jpg) center center no-repeat;
     height: 100%;
     width: 100%;
     -webkit-background-size: cover;
