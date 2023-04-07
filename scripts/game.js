@@ -6,6 +6,7 @@ const correct_letters = document.querySelector(".correct_letters");
 const used_letters = document.querySelector(".used_letters");
 const img = document.querySelector(".img_hang");
 const btn_restart = document.querySelector(".btn_restart");
+const btn_end=document.querySelector(".btn_end");
 
 let wordSelect;
 let letters_used;
@@ -53,11 +54,15 @@ const playGame = () => {
     resetClassBtn();
 }
 
+const return_home =()=>{
+    window.location.href = "index.html";
+}
+
 window.onload = function() {
     playGame();
   };
 btn_restart.addEventListener('click', playGame);
-
+btn_end.addEventListener('click',return_home)
 
 const endGame = () => {
     if (mistakes == 7) {

@@ -4,17 +4,19 @@
     --open-sans: 'Open Sans', sans-serif;
     --cowboy: 'Road Rage', cursive;
     --fondo:#383414;
-    --buton:#402e2e;
+    --fondo_letters:rgba(61, 37, 24, 0.875);
+    --button:#402e2e;
     --info: 'Roboto Slab', serif;
     --start:#654715;
     --add:#34300f;
     --header:#453309e8;
     --again: #886108;
     --leave: #870d0d;
-    --background: #c2b79fa9;
+    --background: #f6f6f681;
     --back_correct:#5a456feb;
     --back_incorrect:#62171ff3;
     --label:#52115d;
+
 }
 
 body {

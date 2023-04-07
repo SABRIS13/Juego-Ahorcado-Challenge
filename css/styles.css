@@ -49,7 +49,7 @@ html, body {
 }
 .game, .add{
     text-decoration:none;
-    color:var(--buton);
+    color:var(--button);
 }
 
 footer{
@@ -92,7 +92,7 @@ header p{
 
 .start_game, .add_button{
     backdrop-filter: blur(5px);
-    color: var(--buton);
+    color: var(--button);
     border: none;
     border-radius: 35px;
     cursor: pointer;
@@ -100,7 +100,7 @@ header p{
     border-top:  1px solid rgba(255, 255, 255, 0.5);
     border-left:  1px solid rgba(255, 255, 255, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ;
-    transition: all 0.3s ease-in-out;;
+    transition: all 0.3s ease-in-out;
 }
 
 /*  Responsividad
