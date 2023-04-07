@@ -17,7 +17,7 @@ header{
 }
 
 body {
-    background: black url(../img/juego_1.jpg);
+    background: black url(../img/juego.jpg);
     height: 100%;
     width: 100%;
     -webkit-background-size: cover;
