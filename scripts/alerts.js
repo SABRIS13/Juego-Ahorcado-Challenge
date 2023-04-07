@@ -33,7 +33,7 @@ function alert_success(word) {
         cancelButtonText: "Leave",
     }).then((result) => {
         if (result.isConfirmed) {
-            playGame()
+            playGame();
         }
         if (result.isDismissed) {
             window.location.href = "index.html";

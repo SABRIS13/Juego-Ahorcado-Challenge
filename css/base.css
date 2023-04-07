@@ -12,9 +12,9 @@
     --header:#453309e8;
     --again: #886108;
     --leave: #870d0d;
-    --background: #f6f6f681;
-    --back_correct:#5a456feb;
-    --back_incorrect:#62171ff3;
+    --background: #9294a19a;
+    --back_correct:#2e4f7cd6;
+    --back_incorrect:rgba(90, 18, 18, 0.938);
     --label:#52115d;
 
 }

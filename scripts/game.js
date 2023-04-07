@@ -1,5 +1,5 @@
 //Palabras a adivinar
-const palabras = ["ALURA","COWBOY"];
+const palabras = ["ALURA","COWBOY","HOUSE","HUMAN","WORLD","WINNER","CAT","DOG","CAKE","SCHOOL","DANCE","WEST","MOVIE","BOOK"];
 
 //Elementos a manipular
 const correct_letters = document.querySelector(".correct_letters");
