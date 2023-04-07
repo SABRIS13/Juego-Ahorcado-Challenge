@@ -33,7 +33,7 @@ const resetsValue = () => { //Resetea los valores para un neuvo juego;
     hits = 0;
     correct_letters.innerHTML = "";
     used_letters.innerHTML = "";
-    img.src = "./img/hang0.png";
+    img.src = "../img/hang0.png";
 }
 
 const generateSpan = () => {
