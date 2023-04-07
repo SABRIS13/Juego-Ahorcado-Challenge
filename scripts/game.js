@@ -88,7 +88,7 @@ const incorrectLetter = letter => {
 
 const wronLetter = letter => {
     mistakes++;
-    let source = `../img/hang${mistakes}.png`;
+    let source = `/img/hang${mistakes}.png`;
     img.src = source;
     endGame();
 }
