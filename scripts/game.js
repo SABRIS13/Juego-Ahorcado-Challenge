@@ -24,7 +24,7 @@ const wordRandom = (min, max) => { //Numero aleatorio;
 
 const wordRandomSelect = () => { // Palabra aleatoria;
     let wordS = palabras[wordRandom(0, palabras.length)];
-    wordSelect = wordS
+    wordSelect = wordS;
 }
 
 const resetsValue = () => { //Resetea los valores para un neuvo juego;
@@ -39,7 +39,7 @@ const resetsValue = () => { //Resetea los valores para un neuvo juego;
 const generateSpan = () => {
     for (let i = 0; i < wordSelect.length; i++) {
         let span = document.createElement('span');
-        correct_letters.appendChild(span)
+        correct_letters.appendChild(span);
     }
 }
 
@@ -62,13 +62,13 @@ window.onload = function() {
     playGame();
   };
 btn_restart.addEventListener('click', playGame);
-btn_end.addEventListener('click',return_home)
+btn_end.addEventListener('click',return_home);
 
 const endGame = () => {
     if (mistakes == 7) {
         alert_error(wordSelect);
     } else if (hits == wordSelect.length) {
-        alert_success(wordSelect)
+        alert_success(wordSelect);
     }
 }
 
@@ -110,7 +110,7 @@ const verifyLetter = letter => {
         classDepend = true;
     } else {
         wronLetter(letter);
-        incorrectLetter(letter)
+        incorrectLetter(letter);
         classDepend = false;
     }
     letters_used.push(letter);

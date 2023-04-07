@@ -17,7 +17,7 @@ header{
 }
 
 body {
-    background: black url(../img/juego.jpg);
+    background: black url(../img/juego_1.jpg);
     height: 100%;
     width: 100%;
     -webkit-background-size: cover;
@@ -233,7 +233,7 @@ footer {
 
 @media (max-width: 900px) {
     body {
-        background-image: url(../img/juego.jpg);
+        background-image: url(../img/juego_1.jpg);
     }
 
     .letters button {
@@ -249,6 +249,6 @@ footer {
 
 @media (max-width:600px) {
     body {
-        background-image: url(../img/juego.jpg);
+        background-image: url(../img/juego_1.jpg);
     }
 }
