@@ -122,25 +122,49 @@ header, footer{
 
 .btn_add:hover{
     background: #562f1b;
+    transform: translateY(-3px);
 }
 .btn_cancel:hover{
     background: rgb(89, 5, 5);
+    transform: translateY(-3px);
+}
+
+.explication:hover{
+    color:rgb(104, 10, 10);
+    transform: translateY(-1px);
 }
 
 /*  Dimensions
 ====================================*/
 
 
-@media (max-width: 900px){
+@media (max-width: 600px){
+
+
+    header,footer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-items: center;
+    }
     body{
         background-image: url("../img/guardar_palabra.jpg");
+ 
+    
     }
 
-}
+    .container{
+        width: 300px;
+    }
 
-@media (max-width:600px){
-    body{
-        background-image: url("../img/guardar_palabra.jpg");
+
+    .text_area{
+        width: 300px;
+        padding: 0;
+    }
+
+    .buttons{
+        width: 300px;
     }
 
 }
