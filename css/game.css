@@ -1,14 +1,13 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-family: var(--cowboy);
 }
 
 /*  Positions
 ====================================*/
 
-header{
+header {
     color: white;
     font-family: var(--info);
     font-size: 18px;
@@ -16,6 +15,7 @@ header{
     align-items: center;
 }
 
+html,
 body {
     background: black url(../img/juego.jpg);
     height: 100%;
@@ -24,6 +24,9 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .stick {
@@ -38,7 +41,7 @@ body {
 }
 
 .img_hang {
-    width: 500px;
+    width: 350px;
     background-size: cover;
 }
 
@@ -232,23 +235,80 @@ footer {
 
 
 @media (max-width: 900px) {
-    body {
-        background-image: url(../img/juego_1.jpg);
+
+    header {
+        width: 100%;
     }
 
-    .letters button {
-        padding: 15px;
+    body {
+        background: black url(../img/juego.jpg);
+        height: 100hv;
+        width: 100hv;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .stick {
+        height: 75%;
+        width: 35%;
+    }
+
+    .img_hang {
+        width: 250px;
+    }
+
+    .correct_letters span {
+        width: 2.5rem;
+        margin-right: 0.5rem;
+        font-size: 1.7rem;
+        border-bottom: 2px solid #48073d;
+    }
+
+    .used_letters {
+        width: 20%;
+    }
+
+    .lX {
+        font-size: 1.4rem;
+        padding: 10px;
+    }
+
+    .letters {
+        left: auto;
+        align-content: flex-start;
+    }
+
+    .letters button,
+    .letters .btn_used,
+    .letters .btn_used_hit {
+        margin:auto;
+        padding: 12px;
+        font-size: small;
+    }
+
+    .buttons_game {
+        width: 300px;
     }
 
     .btn_restart,
     .btn_end {
-        margin-right: 10%;
+        margin-right: 30%;
 
+    }
+
+    footer {
+        bottom: 0;
+        width: 100%;
     }
 }
 
-@media (max-width:600px) {
+
+
+@media (max-width:650px) {
     body {
-        background-image: url(../img/juego_1.jpg);
+        background-image: url(../img/juego.jpg);
     }
 }
