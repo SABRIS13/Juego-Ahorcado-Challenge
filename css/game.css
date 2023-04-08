@@ -97,7 +97,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    top: 500px;
+    top: 470px;
     width: 300px;
     left: 56%;
     font-size: 2rem;
@@ -274,8 +274,8 @@ footer {
     }
 
     .lX {
-        font-size: 1.4rem;
-        padding: 10px;
+        font-size: 1.3rem;
+        padding: 9px;
     }
 
     .letters {
@@ -316,7 +316,7 @@ footer {
     }
 
     .stick {
-        height: 295px;
+        height: 250px;
         width: 90%;
         position: absolute;
     }
@@ -339,13 +339,13 @@ footer {
 
     .used_letters {
         width: 70%;
-        top: 60%;
+        top: 60.5%;
         left:15%
     }
 
     .lX {
-        font-size: 1rem;
-        padding: 7px;
+        font-size: 0.8rem;
+        padding: 5px;
     }   
     
     .letters {
@@ -362,42 +362,50 @@ footer {
     }
 
     .buttons_game {
-        top: 81%;
+        top: 83%;
         width:70%;
-        left:28%; 
+        left:27%; 
     }
 
     .btn_restart,
     .btn_end {
         font-size: 1rem;
-        height: 30px;
-        margin-top: 2px;
-        width: 50%;
+        height: 20px;
+        margin-top: 1px;
+        width: 45%;
     }
 
     footer{
         display: flex;
         align-items: center;
+        
     }
 
 }
 
 @media (max-width:400px) {
 
+    .stick{
+        height: 250px;
+    }
+
+
+
     .used_letters {
         width: 70%;
-        top: 60%;
+        top: 61%;
         left:15%
     }
 
     .lX {
         font-size: 1rem;
-        padding: .4rem;
+        padding: .3rem;
     }   
 
     .letters{
         width: 80%;
         left:20%;
+        top:66%;
     }
     .letters button,
     .letters .btn_used,
