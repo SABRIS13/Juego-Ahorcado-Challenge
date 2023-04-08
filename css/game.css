@@ -265,10 +265,12 @@ footer {
         margin-right: 0.5rem;
         font-size: 1.7rem;
         border-bottom: 2px solid #48073d;
+        top: 15%;
     }
 
     .used_letters {
         width: 20%;
+        top: 33%
     }
 
     .lX {
@@ -279,24 +281,25 @@ footer {
     .letters {
         left: auto;
         align-content: flex-start;
+        top: 40%;
     }
 
     .letters button,
     .letters .btn_used,
     .letters .btn_used_hit {
-        margin:auto;
+        margin: auto;
         padding: 12px;
         font-size: small;
     }
 
     .buttons_game {
         width: 300px;
+        top: 60%
     }
 
     .btn_restart,
     .btn_end {
         margin-right: 30%;
-
     }
 
     footer {
@@ -311,4 +314,64 @@ footer {
     body {
         background-image: url(../img/juego.jpg);
     }
+
+    .stick {
+        height: 295px;
+        width: 90%;
+        position: absolute;
+    }
+
+    .img_hang {
+        width: 150px;
+    }
+
+    .correct_letters {
+        top: 60%;
+        left: 15%;
+        width: 70%;
+    }
+
+    .correct_letters span {
+        width: 2rem;
+        margin-right: 0.5rem;
+
+    }
+
+
+    .letters {
+        top: 70%;
+        left: 10%;   
+
+    }
+
+    .used_letters {
+        width: 20%;
+        top: 65%;
+    }
+
+    .lX {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    .letters button,
+    .letters .btn_used,
+    .letters .btn_used_hit {
+        margin: auto;
+        padding:6px;
+        font-size: small;
+    }
+
+
+    .buttons_game {
+        top: 80%;
+        flex-direction: row;
+        left:10%; 
+        margin-right: 0;
+    }
+    .btn_restart,
+    .btn_end {
+        font-size: 1rem;
+    }
+
 }
