@@ -49,7 +49,8 @@ function added_word(){
       icon: 'success',
       title: 'Your word has been added!',
       showConfirmButton: false,
-      timer:600
+      timer:500,
+
     })
   }
 
@@ -59,7 +60,7 @@ function added_word(){
       icon: 'warning',
       title: 'Your word ' + word + " it´s already added!",
       showConfirmButton: false,
-      timer: 600
+      timer:500,
       
     })
   }

@@ -17,6 +17,7 @@ header {
     align-items: center;
 }
 
+
 body {
     background-image: url("../img/guardar_palabra.jpg");
     -webkit-background-size: cover;
@@ -27,6 +28,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 
 .text_area {
     display: flex;
@@ -70,6 +72,11 @@ body {
     height: 50px;
 
 }
+
+body.swal2-height-auto {
+    height: -webkit-fill-available;
+}
+
 
 footer {
     justify-content: center;
@@ -121,11 +128,6 @@ footer {
     font-size: 2rem;
 }
 
-
-body.swal2-height-auto {
-    height: inherit !important;
-}
-
 /*  Hover
 ====================================*/
 
@@ -150,6 +152,9 @@ body.swal2-height-auto {
 
 @media (max-width: 600px) {
 
+    body {
+        background-image: url("../img/guardar_palabra.jpg");
+    }
 
     header,
     footer {
