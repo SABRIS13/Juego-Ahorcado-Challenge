@@ -375,6 +375,11 @@ footer {
         width: 50%;
     }
 
+    footer{
+        display: flex;
+        align-items: center;
+    }
+
 }
 
 @media (max-width:400px) {
@@ -392,7 +397,7 @@ footer {
 
     .letters{
         width: 80%;
-        left:18%;
+        left:20%;
     }
     .letters button,
     .letters .btn_used,
@@ -404,4 +409,5 @@ footer {
         width: 80%;
         left:28%;
     }
+
 }
