@@ -1,7 +1,7 @@
-//Palabras a adivinar
-const palabras = ["ALURA","COWBOY","HOUSE","HUMAN","WORLD","WINNER","CAT","DOG","CAKE","SCHOOL","DANCE","WEST","MOVIE","BOOK"];
+//Words 
+const words = ["ALURA","COWBOY","HOUSE","HUMAN","WORLD","WINNER","CAT","DOG","CAKE","SCHOOL","DANCE","WEST","MOVIE","BOOK"];
 
-//Elementos a manipular
+//Elements
 const correct_letters = document.querySelector(".correct_letters");
 const used_letters = document.querySelector(".used_letters");
 const img = document.querySelector(".img_hang");
@@ -13,21 +13,20 @@ let letters_used;
 let mistakes;
 let hits;
 let classDepend = true;
-//LLamadas
+//Calls
 
-
-const wordRandom = (min, max) => { //Numero aleatorio;
+const wordRandom = (min, max) => { //Random numer;
     let aWord = max - min;
     let wordR = Math.floor(Math.random() * aWord + min);
     return wordR;
 }
 
-const wordRandomSelect = () => { // Palabra aleatoria;
-    let wordS = palabras[wordRandom(0, palabras.length)];
+const wordRandomSelect = () => { // Random word;
+    let wordS = words[wordRandom(0, words.length)];
     wordSelect = wordS;
 }
 
-const resetsValue = () => { //Resetea los valores para un neuvo juego;
+const resetsValue = () => { //Restart values of the game;
     letters_used = [];
     mistakes = 0;
     hits = 0;
@@ -43,8 +42,7 @@ const generateSpan = () => {
     }
 }
 
-
-//Botones ya con sus eventos a escuchar;
+//Events
 
 const playGame = () => {
     resetsValue();
@@ -60,7 +58,8 @@ const return_home =()=>{
 
 window.onload = function() {
     playGame();
-  };
+}
+
 btn_restart.addEventListener('click', playGame);
 btn_end.addEventListener('click',return_home);
 

@@ -110,8 +110,9 @@ body {
 }
 
 body.swal2-height-auto {
-    height: inherit;
+    height: -webkit-fill-available;
 }
+
 
 /*              Styles
 ========================================*/

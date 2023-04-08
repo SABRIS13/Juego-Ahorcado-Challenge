@@ -116,6 +116,10 @@ header, footer{
     font-size: 2rem;
 }
 
+body.swal2-height-auto {
+    height: -webkit-fill-available;
+}
+
 
 /*  Hover
 ====================================*/
