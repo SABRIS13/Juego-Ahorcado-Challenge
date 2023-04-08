@@ -3,12 +3,132 @@
     padding: 0;
 }
 
+
+/* Positions
+====================================*/
+
+html,body{
+    height: 100hv;
+    width: 100%;
+}
+
+header{
+    align-items: center;
+}
+
 body{
     background-image: url("../img/guardar_palabra.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_add{
+    width: 500px;
+    margin-bottom: 10px;
+}
+
+.explication {
+    align-self: center;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;  
+    width: 300px; 
+    
+}
+
+.img_explication{
+    width: 15px;
+    height: 15px;
+
 }
 
 
+.buttons{
+    width: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
+.btn_add , .btn_cancel{
+    width:150px;
+    margin-top: 25px;
+    height: 50px;
+
+}
+
+footer{
+    justify-content: center;
+}
+/* Styles
+====================================*/
+
+.text_add{
+    border-radius: 35px;
+    background: rgba(231, 223, 213, 0.616);
+    border-top:  1px solid rgba(242, 230, 230, 0.5);
+    border-left:  1px solid rgba(137, 121, 54, 0.5);
+    box-shadow: 0 5px 15px rgba(199, 185, 185, 0.303) ;
+    letter-spacing: 2px;
+    backdrop-filter: blur(4px);
+    font-size: 1.5rem;
+    padding: 25px 25px;
+}
+
+header, footer{
+    font-family: var(--info);
+    color: white;
+    font-size: 18px;
+}
+
+.explication{
+    border-radius: 20px;
+    background: rgba(215, 202, 202, 0.801);
+}
+
+.excla{
+    font-size: 1.5rem;
+    color:var("--excla");
+}
+
+.btn_add , .btn_cancel{
+    color: white;
+    border: none;
+    border-radius: 35px;
+    cursor: pointer;
+    background: rgba(39, 32, 9, 0.922);
+    border-top:  1px solid rgba(255, 255, 255, 0.5);
+    border-left:  1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1) ;
+    transition: all 0.3s ease-in-out;
+    font-size: 2rem;
+}
+
+
+/*  Hover
+====================================*/
+
+.btn_add:hover{
+    background: #562f1b;
+}
+.btn_cancel:hover{
+    background: rgb(89, 5, 5);
+}
+
+/*  Dimensions
+====================================*/
 
 
 @media (max-width: 900px){

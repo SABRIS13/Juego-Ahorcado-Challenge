@@ -103,7 +103,7 @@ header p{
     transition: all 0.3s ease-in-out;
 }
 
-/*  Responsividad
+/*  Hover
 =============================================*/
 
 .start_game:hover{
@@ -123,7 +123,7 @@ header p{
 }
 
 
-/*  Responsividad
+/*  Dimensions
 =============================================*/
 
 @media (max-width: 900px){
