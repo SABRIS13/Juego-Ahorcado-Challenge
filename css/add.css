@@ -9,7 +9,7 @@
 
 html,
 body {
-    height: 100hv;
+    height: 100%;
     width: 100%;
 }
 
@@ -121,10 +121,10 @@ footer {
     font-size: 2rem;
 }
 
-body.swal2-height-auto {
-    height: -webkit-fill-available;
-}
 
+body.swal2-height-auto {
+    height: inherit !important;
+}
 
 /*  Hover
 ====================================*/
