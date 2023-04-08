@@ -19,10 +19,13 @@ Second challenge of the "New Education Oracle" program with Alura Latam, that co
 
 ## Results 
 
-**Desktop version** <br>
+<div align="center">
+<strong> Desktop version </strong> <br>
 <img src="https://user-images.githubusercontent.com/101822315/230732638-15ea0cb1-4d9d-4c2d-80f9-fc8632170f0e.png" width=70%> <br>
-**Cellphone version** <br>
+<strong> Cellphone version</strong> <br>
 <img src="https://user-images.githubusercontent.com/101822315/230732670-7ecccbb4-e474-42d4-9506-910331b8328b.png" width=25%><br>
+</div>
+
 
 
 ### Wanna try it? [🏜️]( https://sabris13.github.io/Juego-Ahorcado-Challenge/) 
